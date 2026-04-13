@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS+X Proposal — Demos</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1410;
+      --parchment: #f5f0e8;
+      --dim: #7a6e60;
+      --accent: #8b3a2a;
+      --rule: #c8bfaf;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'Courier Prime', monospace;
+      min-height: 100vh;
+      padding: 4rem 2rem;
+      /* subtle grain */
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    .wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--rule);
+      padding: 2rem 0 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-family: 'IM Fell English', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      line-height: 1.1;
+      font-weight: 400;
+    }
+
+    h1 em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .subtitle {
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      color: var(--dim);
+      letter-spacing: 0.05em;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--dim);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Prayer Machines */
+    .trials-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .trial-item {
+      display: grid;
+      grid-template-columns: 5rem 1fr;
+      gap: 1rem;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.15s;
+    }
+
+    .trial-item:hover .trial-title {
+      color: var(--accent);
+    }
+
+    .trial-num {
+      font-size: 0.65rem;
+      color: var(--dim);
+      letter-spacing: 0.1em;
+    }
+
+    .trial-title {
+      font-family: 'IM Fell English', serif;
+      font-size: 1rem;
+      transition: color 0.15s;
+    }
+
+    /* Voice test */
+    .voice-block {
+      padding: 1rem 0;
+    }
+
+    .voice-block p {
+      font-size: 0.8rem;
+      color: var(--dim);
+      margin-bottom: 1rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    audio {
+      width: 100%;
+      height: 36px;
+      accent-color: var(--accent);
+      filter: sepia(0.2);
+    }
+
+    /* Note */
+    .note {
+      font-size: 0.75rem;
+      color: var(--dim);
+      font-style: italic;
+      line-height: 1.7;
+      border-left: 2px solid var(--rule);
+      padding-left: 1rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 1.5rem;
+      font-size: 0.65rem;
+      color: var(--dim);
+      letter-spacing: 0.1em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a.plain {
+      color: var(--dim);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: color 0.15s, border-color 0.15s;
+    }
+    a.plain:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="eyebrow">CS+X Grant Application · 2026</div>
+    <h1>Shrine / <em>Oracle</em></h1>
+    <div class="subtitle">Interactive installation — embodied virtual agents &amp; prayer machines</div>
+  </header>
+
+  <!-- Prayer Machine Trials -->
+  <section>
+    <div class="section-label">Prayer Machines — N-gram Trials</div>
+    <div class="trials-grid">
+      <a class="trial-item" href="demos/trial_1.txt" target="_blank">
+        <span class="trial-num">trial 01</span>
+        <span class="trial-title">N-gram output — run 1</span>
+      </a>
+      <a class="trial-item" href="demos/trial_2.txt" target="_blank">
+        <span class="trial-num">trial 02</span>
+        <span class="trial-title">N-gram output — run 2</span>
+      </a>
+      <a class="trial-item" href="demos/trial_3.txt" target="_blank">
+        <span class="trial-num">trial 03</span>
+        <span class="trial-title">N-gram output — run 3</span>
+      </a>
+      <a class="trial-item" href="demos/trial_4.txt" target="_blank">
+        <span class="trial-num">trial 04</span>
+        <span class="trial-title">N-gram output — run 4</span>
+      </a>
+      <a class="trial-item" href="demos/trial_5.txt" target="_blank">
+        <span class="trial-num">trial 05</span>
+        <span class="trial-title">N-gram output — run 5</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Voice Test -->
+  <section>
+    <div class="section-label">Voice Test — Cibo Matto</div>
+    <div class="voice-block">
+      <p>Voice synthesis trial. Reference: Cibo Matto.</p>
+      <audio controls>
+        <source src="output_cibo.wav" type="audio/wav" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </section>
+
+  <!-- Concepts -->
+  <section>
+    <div class="section-label">Concepts</div>
+    <p class="note">
+      Reference images and FigJam exports —
+      <a class="plain" href="concepts/CS_X.pdf" target="_blank">view PDF</a>
+    </p>
+  </section>
+
+  <footer>
+    <span>orphisia / CS_X-Proposal</span>
+    <a class="plain" href="https://github.com/orphisia/CS_X-Proposal" target="_blank">github</a>
+  </footer>
+
+</div>
+</body>
+</html>
