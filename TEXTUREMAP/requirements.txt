@@ -1,0 +1,20 @@
+# CSX sphere-texture model — Python dependencies.
+#
+# The src/ core (interpolation, seam, projection, viz) needs only torch + numpy
+# and runs on CPU. The rest support data scraping/cleaning and, on a CUDA box,
+# StyleGAN2-ADA training + latent-walk rendering.
+#
+# numpy is pinned < 2 because StyleGAN3's custom CUDA ops break on numpy 2.x.
+
+torch>=2.0.0
+torchvision
+numpy<2
+Pillow>=9.0
+requests
+imagehash
+imageio[ffmpeg]
+scipy
+tqdm
+click
+opencv-python
+ninja

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# CSX large artifacts — keep in HF Hub, not git
+TEXTUREMAP/data/raw/
+TEXTUREMAP/data/processed/
+TEXTUREMAP/data/datasets/
+TEXTUREMAP/checkpoints/
+TEXTUREMAP/outputs/
+
+# macOS
+.DS_Store

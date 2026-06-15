@@ -1,0 +1,3 @@
+[submodule "TEXTUREMAP/third_party/stylegan3"]
+	path = TEXTUREMAP/third_party/stylegan3
+	url = https://github.com/NVlabs/stylegan3.git
