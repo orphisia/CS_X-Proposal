@@ -13,5 +13,15 @@ TEXTUREMAP/data/datasets/
 TEXTUREMAP/checkpoints/
 TEXTUREMAP/outputs/
 
+# StyleGAN generation outputs (snapshots, generated media, sample sheets)
+# scoped to our pipeline dirs so the stylegan3 submodule's own assets are untouched
+TEXTUREMAP/results/
+TEXTUREMAP/samples/
+TEXTUREMAP/scripts/**/*.pkl
+TEXTUREMAP/src/**/*.pkl
+TEXTUREMAP/**/network-snapshot-*.pkl
+TEXTUREMAP/**/fakes*.png
+TEXTUREMAP/**/*_contact.jpg
+
 # macOS
 .DS_Store
